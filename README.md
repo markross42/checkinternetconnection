@@ -1,5 +1,5 @@
 # check internet connection
-Check internet connection by one ping host and use resultcode and roundtrip time to descide, if the connection is up
+Check internet connection by one ping to host and use resultcode ($?) and roundtrip time to descide, if the connection is up
 
 When the ping failes, the internet connection seems down. 
 A timestamp is written to a log file - start of failue.
