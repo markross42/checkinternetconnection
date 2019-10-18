@@ -5,6 +5,8 @@
 date
 GREP_PROCESS=checkinternetco
 FILE_NAME=checkinternetconnection.sh
+echo ${FILE_NAME:0:14}
+exit 0
 cd $(dirname $0)
 PGREP_RESULT=$(/usr/bin/pgrep $GREP_PROCESS)
 RESULT_CODE=$?
