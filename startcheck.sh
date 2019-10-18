@@ -3,10 +3,9 @@
 # for example, run startcheck.sh all 5 minutes
 # */5 * * * * /path/to/startcheck.sh
 date
-GREP_PROCESS=checkinternetco
+
 FILE_NAME=checkinternetconnection.sh
-echo ${FILE_NAME:0:15}
-exit 0
+GREP_PROCESS=${FILE_NAME:0:15}
 cd $(dirname $0)
 PGREP_RESULT=$(/usr/bin/pgrep $GREP_PROCESS)
 RESULT_CODE=$?
