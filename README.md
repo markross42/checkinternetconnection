@@ -29,7 +29,7 @@ This is the host for the ping. I configured google DNS (8.8.8.8). When this host
 I think, my internet connection is the lesser evil. 
 
 ```
-LOG_FILE=checkinternetconnection.log
+LOG_FILE=cic.log
 ```
 
 ```
@@ -47,12 +47,12 @@ How long - in seconds - should be waited between pings
 In the checkinternetconnection directory start script in backgound
 
 ```
-nohup ./checkinternetconnection.sh &
+nohup ./cic.sh &
 ```
 Result of standard out is written to `nohup.out
 
 ##log file 
-a semicolon separated file is generated: initial checkinternetconnection.log
+a semicolon separated file is generated: initial cic.log
 
 Format: `dd.mm.yyyy;hh:mm:ss;fail state;roundtrip time;fail name;result code`
 * dd.mm.yyyy: date
@@ -62,4 +62,10 @@ Format: `dd.mm.yyyy;hh:mm:ss;fail state;roundtrip time;fail name;result code`
 * fail name: PING_OK, PING_FAILED, TOO_QUICKLY
 ```
 ddmmyyyy;hh:mm:ss
+```
+
+## startcheck.sh
+Script for starting cic from crontab, if script is running, do nothing for example, run `startcheck.sh` all 5 minutes
+```
+ */5 * * * * /path/to/startcheck.sh
 ```
