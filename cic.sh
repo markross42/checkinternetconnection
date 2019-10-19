@@ -4,7 +4,7 @@
 #
 
 HOST_TO_PING=8.8.8.8 # 8.8.8.8 / 4.4.4.4 google DNS
-LOG_FILE=checkinternetconnection.log
+LOG_FILE=cic.log
 
 # if logfile does no exist, create it and write header
 # dd.mm.yyyy;hh:mm:ss;fail state;roundtrip time;fail name;result code
