@@ -4,10 +4,9 @@
 # */5 * * * * /path/to/startcheck.sh
 date
 
-FILE_NAME=checkinternetconnection.sh
-GREP_PROCESS=${FILE_NAME:0:15}
+FILE_NAME=cic.sh
 cd $(dirname $0)
-PGREP_RESULT=$(/usr/bin/pgrep $GREP_PROCESS)
+PGREP_RESULT=$(/usr/bin/pgrep $FILE_NAME)
 RESULT_CODE=$?
 if [ $RESULT_CODE -ge 1 ]
 then
